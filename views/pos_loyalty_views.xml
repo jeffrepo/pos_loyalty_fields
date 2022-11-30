@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+        <record id="view_partner_property_form_inh" model="ir.ui.view">
+            <field name="name">res.partner.form.inh</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="pos_loyalty.view_partner_property_form"/>
+            <field name="arch" type="xml">
+			<field name="loyalty_points" position="attributes">
+				<attribute name="groups">pos_loyalty_fields.group_loyalty_points</attribute>
+                    </field>
+            </field>
+        </record>
+
+        <record id="view_pos_pos_form_inh" model="ir.ui.view">
+            <field name="name">pos.order.form.inh</field>
+            <field name="model">pos.order</field>
+            <field name="inherit_id" ref="pos_loyalty.view_pos_pos_form"/>
+            <field name="arch" type="xml">
+		    <field name="loyalty_points" position="attributes">
+				<attribute name="groups">pos_loyalty_fields.group_loyalty_points</attribute>
+		    </field>
+            </field>
+        </record>
+
+</odoo>
